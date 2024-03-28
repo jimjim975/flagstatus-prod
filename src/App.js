@@ -96,19 +96,19 @@ const App = () => {
   const [rows, setRows] = useState([]);
   const [searchResult, setSearchResult] = useState({});
   
-  // useEffect(() => {
-  //   //console.log(data);
-  //   if (selector !== ""){
-  //     fetch(`https://api.flagstatus.org/region/${selector}`)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((json) => {
-  //       console.log(json);
-  //       setRows(formatRows(json[selector]));
-  //     });
-  //   }
-  // }, [selector]);
+  useEffect(() => {
+    //console.log(data);
+    if (selector){
+      fetch(`https://api.flagstatus.org/region/${selector}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        console.log(json);
+        setRows(formatRows(json[selector]));
+      });
+    }
+  }, [selector]);
 
   useEffect(() => {
     const getFlagStatusAsync = async (url) => {
