@@ -82,7 +82,6 @@ function FlagEvents() {
             '.MuiSvgIcon-root ': {
               fill: '#B6B6B6',
             },
-            elevation: 12
           }}
           label="Region"
           onChange={handleChange}
@@ -101,7 +100,7 @@ function FlagEvents() {
           })}
         </Select>
       </FormControl>
-      <FormControl sx={{ marginBottom: 3 }}>
+      <FormControl>
         <FormGroup>
           <FormControlLabel sx={{ color: '#B6B6B6' }} label="Active Today" control={
             <Switch checked={isActive} onChange={handleToggle} />
@@ -114,7 +113,7 @@ function FlagEvents() {
             return (
               <Box width="100%" key={JSON.stringify(row)}>
                 <FlagCard key={JSON.stringify(row)} description={row['Description']} state={row['Origin Flag']} startDate={row['Start Date']} endDate={row['End Date']} />
-                {(i < rows.length - 1) && <Divider sx={{ my: 3, backgroundColor: '#B6B6B6' }} />}
+                {(i < rows.length - 1) && <Divider sx={{ backgroundColor: '#B6B6B6' }} />}
               </Box>
             )
           })

@@ -9,10 +9,10 @@ function FlagCard({ description, startDate, endDate, state }) {
     }
 
     return (
-        <Box width="100%">
+        <Box width="100%" sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
                 <Grid>
-                    <Typography sx={{ fontSize: "2rem", color: "#B6B6B6", textAlign: "left" }}>{state}</Typography>
+                    <Typography sx={{ marginTop: 0, fontSize: "2rem", color: "#B6B6B6", textAlign: "left" }}>{state}</Typography>
                 </Grid>
                 <Grid>
                     <IconButton sx={{ '&:hover': { backgroundColor: '#4B4B4B' } }} onClick={() => handleCopy(description)}><ContentCopyIcon sx={{ color: "#378CE7" }} /></IconButton>
