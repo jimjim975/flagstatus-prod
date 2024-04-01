@@ -6,7 +6,7 @@ import * as React from 'react';
 function FlagCard({ description, startDate, endDate, state }) {
     const handleCopy = async (text) => {
         await navigator.clipboard.writeText(text);
-      }
+    }
 
     return (
         <Box width="100%">
