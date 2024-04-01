@@ -15,7 +15,7 @@ function FlagCard({ description, startDate, endDate, state }) {
                     <Typography sx={{ fontSize: "2rem", color: "#B6B6B6", textAlign: "left" }}>{state}</Typography>
                 </Grid>
                 <Grid>
-                    <IconButton onClick={() => handleCopy(description)}><ContentCopyIcon sx={{ color: "#378CE7" }} /></IconButton>
+                    <IconButton sx={{ '&:hover': { backgroundColor: '#4B4B4B' } }} onClick={() => handleCopy(description)}><ContentCopyIcon sx={{ color: "#378CE7" }} /></IconButton>
                 </Grid>
             </Grid>
             <Typography sx={{ fontSize: "1.2rem", color: "#B6B6B6", textAlign: "left" }}>{startDate} - {endDate}</Typography>
