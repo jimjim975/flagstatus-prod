@@ -18,7 +18,7 @@ function Status() {
   }, []);
 
   return (
-    <Typography sx={{ color: '#5C5C5C', my: 3 }}>{data['Amount']} events added since {data['Time']} on {data['date']}</Typography>
+    <Typography sx={{ color: '#5C5C5C', my: 3 }}>{data['Amount']} event(s) added since {data['Time']} on {data['date']}</Typography>
   );
 }
 
