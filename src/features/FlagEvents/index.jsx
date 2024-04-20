@@ -36,8 +36,8 @@ function FlagEvents() {
 
   const filterData = (data) => {
     return data.filter((i) => {
-      const today = new Date();
-      if (today >= new Date(i['Start Date']) && today <= new Date(i['End Date'])) {
+      const today = new Date().setHours(0, 0, 0, 0);
+      if (today >= new Date(i['Start Date'].replaceAll('-', '/')) && today <= new Date(i['End Date'].replaceAll('-', '/'))) {
         return i;
       }
       return false;
